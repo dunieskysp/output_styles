@@ -6,13 +6,14 @@ Funciones para aplicar los estilos al texto.
 from outputstyles.variables import all_styles
 
 
-def add_text_styles(text, styles=[]):
+def add_text_styles(text, styles=[], all_styles=all_styles):
     """
     Aplicarles los estilos al texto.
 
     Parameters:
     text (str): Texto al que se le van a aplicar los estilos
     styles (list): Lista de estilos que se le van a aplicar al texto
+    all_styles (dict): Diccionario con todos los estilos posibles
 
     Returns:
     srt: Devuelve el texto con los estilos aplicados
@@ -82,7 +83,7 @@ def print_message(text, msg_format=None, message_data=None):
     Parameters:
     text (str): Texto al que se le van a aplicar los estilos
     msg_format (str): Formato del tipo de mensaje ('ico', 'btn', 'btn_ico')
-    message_data (dic): Datos del tipo de mensaje (error_data, warning_data, success_data, info_data)
+    message_data (dict): Datos del tipo de mensaje (error_data, warning_data, success_data, info_data)
 
     Returns:
     srt: Devuelve el código del texto con los estilos aplicados

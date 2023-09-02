@@ -44,7 +44,7 @@ print(bold("Bold!"))
 
 ## Screenshots
 
-![output_styles](docs/img/output_styles.png)
+![output_styles](docs/img/output_styles_light.png)
 
 ## License
 
