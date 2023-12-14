@@ -1,10 +1,11 @@
 """
-Variables con todos los Estilos que se le pueden aplicar a los textos
-y los datos de los diferentes tipos de mensajes
+Variables con todos los Estilos que se le pueden aplicar
+a los textos y los datos de los diferentes tipos de mensajes.
 """
 
 all_styles = {
-    # Formatos
+
+    # Formatos.
     'reset': '\033[0m',
     'bold': '01',
     'disabled': '02',
@@ -16,7 +17,7 @@ all_styles = {
     'invisible': '08',
     'strike_through': '09',
 
-    # Colores del Texto
+    # Colores del Texto.
     'fg_black': '30',
     'fg_red': '31',
     'fg_green': '32',
@@ -34,7 +35,7 @@ all_styles = {
     'fg_cyan2': '96',
     'fg_white2': '97',
 
-    # Colores del Fondo
+    # Colores del Fondo.
     'bg_black': '40',
     'bg_red': '41',
     'bg_green': '42',
@@ -54,9 +55,9 @@ all_styles = {
 }
 """
 Contiene todos los estilos que se le pueden aplicar a los textos:
-- Formato (Bold, Underline, etc)
-- Color del Texto (Red, Black, Green, etc)
-- Color del Fondo (Red, Black, Green, etc)
+- Formato (Bold, Underline, etc).
+- Color del Texto (Red, Black, Green, etc).
+- Color del Fondo (Red, Black, Green, etc).
 """
 
 
@@ -65,7 +66,7 @@ error_data = {
     "color": "red"
 }
 """
-Datos del Mensaje de tipo 'Error'
+Datos del Mensaje de tipo 'Error'.
 - Icono: \u2718
 - Color: Red
 """
@@ -76,7 +77,7 @@ warning_data = {
     "color": "yellow"
 }
 """
-Datos del Mensaje de tipo 'Warning'
+Datos del Mensaje de tipo 'Warning'.
 - Icono: \u26A0
 - Color: Yellow
 """
@@ -87,7 +88,7 @@ success_data = {
     "color": "green"
 }
 """
-Datos del Mensaje de tipo 'Success'
+Datos del Mensaje de tipo 'Success'.
 - Icono: \u2714
 - Color: Green
 """
@@ -98,7 +99,7 @@ info_data = {
     "color": "blue"
 }
 """
-Datos del Mensaje de tipo 'Info'
+Datos del Mensaje de tipo 'Info'.
 - Icono: \u24D8
 - Color: Blue
 """

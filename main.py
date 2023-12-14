@@ -1,62 +1,64 @@
-from outputstyles.msg_print import error, warning, info, success, bold
+from outputstyles.msg_type import error, warning, info, success, bold
 
-functions_styles = {
+func_style_names = {
     "error": error,
     "warning": warning,
     "success": success,
     "info": info,
     "bold": bold
 }
-"""Nombre de las Funciones de los diferentes tipos de mensajes"""
+"""Nombre de las Funciones de los diferentes tipos de mensajes."""
 
-function_options = [None, "btn", "ico", "btn_ico"]
-"""Opciones para los diferentes tipos de mensajes"""
+format_options = ["btn", "ico", "btn_ico"]
+"""Opciones de los formatos para los diferentes tipos de mensajes."""
 
 
-def print_all_messages(dict_functions, list_options):
+def print_all_messages(func_style_names: dict, format_options: list) -> None:
     """
-    Imprimir los diferentes tipos de mensajes con todas sus variantes de formato
+    Imprimir los diferentes tipos de mensajes con todas sus variantes de formato.
 
     Parameters:
-    dict_functions (dict): Nombres de las funciones de los tipos de mensajes
-    list_options (list): Formato del tipo de mensaje (None, 'ico', 'btn', 'btn_ico')
+    func_style_names (dict): Nombres de las funciones de los tipos de mensajes.
+    format_options (list): Formatos del tipo de mensaje ('ico', 'btn', 'btn_ico').
 
     Returns:
-    print: Imprime el texto con los estilos aplicados
+    None: Imprime el texto con los estilos aplicados.
     """
 
-    # Recorrer todas las funciones según su "Key" dentro del diccionario de funciones
-    for func_name in dict_functions:
-        # Obtener la función declarada del tipo de mensaje
-        func_style = dict_functions[func_name]
+    # Recorrer todas las funciones según su "Key" dentro del diccionario de funciones.
+    for func_name in func_style_names:
 
-        # Texto a imprimir es el nombre de la función en Mayúscula, más el simbolo "!"
-        text_print = f'{func_name.capitalize()}!'
+        # Obtener la función declarada del tipo de mensaje.
+        func_type_msg = func_style_names[func_name]
 
-        # Si es la función de Bold, imprimimos sin opciones
-        if func_name == "bold":
-            # Ejecutamos la función con el texto y mostramos como se usa
-            print(func_style(text_print), '-->',
-                  f'{func_name}("{text_print}")')
+        # El Texto a imprimir es el nombre de la función en Mayúscula, más el simbolo "!".
+        msg_text = f'{func_name.capitalize()}!'
 
-        # Para los demás tipos de mensajes
-        else:
-            # Recorrer las opciones para los demás tipos de mensajes
-            for option in list_options:
-                # Si la opción está vacia (Solo el texto), imprimimos sin opciones
-                if not option:
-                    print(func_style(text_print),
-                          '-->', f'{func_name}("{text_print}")')
+        # Imprimir sin opciones de formato la primera vez.
+        print(
+            func_type_msg(msg_text),
+            '-->', f'{func_name}("{msg_text}")'
+        )
 
-                # Imprimir cada tipo de opción (btn, fig, btn_fig)
-                else:
-                    print(func_style(text_print, option), '-->',
-                          f'{func_name}("{text_print}", "{option}")')
+        # Recorrer las opciones para imprimir sus variantes de formatos.
+        for msg_format in format_options:
 
-        # Dejar un espacio vacio cada vez que se finalice un bloque de tipo de mensajes
+            # Si es la función de Bold porque esta no tiene diferentes formatos.
+            if func_name == "bold":
+                break
+
+            # Imprimir cada tipo de opción (btn, fig, btn_fig).
+            else:
+
+                print(
+                    func_type_msg(msg_text, msg_format), '-->',
+                    f'{func_name}("{msg_text}", "{msg_format}")'
+                )
+
+        # Dejar un espacio entre cada bloque de tipo de mensajes.
         print("")
 
 
-# Imprimir todos los tipos de mensajes con todas sus variantes de formato
+# Imprimir todos los tipos de mensajes con todas sus variantes.
 print(info("Ejemplos del resultado final y como usarlo:\n"))
-print_all_messages(functions_styles, function_options)
+print_all_messages(func_style_names, format_options)
