@@ -1,4 +1,8 @@
-from outputstyles.msg_type import error, warning, info, success, bold
+"""
+Probar el paquete "outputstyles".
+"""
+
+from outputstyles import error, warning, info, success, bold
 
 func_style_names = {
     "error": error,
@@ -37,23 +41,24 @@ def print_all_messages(func_style_names: dict, format_options: list) -> None:
         # Imprimir sin opciones de formato la primera vez.
         print(
             func_type_msg(msg_text),
-            '-->', f'{func_name}("{msg_text}")'
+            '->',
+            f'{func_name}("{msg_text}")'
         )
 
         # Recorrer las opciones para imprimir sus variantes de formatos.
         for msg_format in format_options:
 
-            # Si es la función de Bold porque esta no tiene diferentes formatos.
+            # Si es la función de Bold, rompemos el ciclo
+            # porque esta no tiene diferentes formatos.
             if func_name == "bold":
                 break
 
-            # Imprimir cada tipo de opción (btn, fig, btn_fig).
-            else:
-
-                print(
-                    func_type_msg(msg_text, msg_format), '-->',
-                    f'{func_name}("{msg_text}", "{msg_format}")'
-                )
+            # Imprimir cada tipo de opción (btn, ico, btn_ico).
+            print(
+                func_type_msg(msg_text, msg_format),
+                '->',
+                f'{func_name}("{msg_text}", "{msg_format}")'
+            )
 
         # Dejar un espacio entre cada bloque de tipo de mensajes.
         print("")

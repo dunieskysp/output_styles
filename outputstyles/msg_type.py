@@ -1,11 +1,14 @@
 """
-Imprimir los diferentes tipos de mensajes.
+Funciones para los diferentes tipos de mensajes.
+    - Error
+    - Warning
+    - Success
+    - Info
+    - Bold
 """
 
-
 # Importar los datos de los diferentes tipos de mensajes y las funciones.
-from outputstyles.apply_styles import apply_styles
-from outputstyles.variables import error_data, info_data, success_data, warning_data
+from outputstyles import apply_styles, error_data, info_data, success_data, warning_data
 
 
 def error(text: str, msg_format: str = "", message_data: dict = error_data) -> str:
