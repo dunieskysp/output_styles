@@ -5,7 +5,7 @@ a los textos y los datos de los diferentes tipos de mensajes.
 
 all_styles = {
 
-    # Formatos.
+    # Modificadores.
     'reset': '\033[0m',
     'bold': '01',
     'disabled': '02',
@@ -14,7 +14,7 @@ all_styles = {
     'blink': '05',
     'blink2': '06',
     'reverse': '07',
-    'invisible': '08',
+    'hidden': '08',
     'strike_through': '09',
 
     # Colores del Texto.
@@ -26,14 +26,14 @@ all_styles = {
     'fg_magenta': '35',
     'fg_cyan': '36',
     'fg_white': '37',
-    'fg_black2': '90',
-    'fg_red2': '91',
-    'fg_green2': '92',
-    'fg_yellow2': '93',
-    'fg_blue2': '94',
-    'fg_magenta2': '95',
-    'fg_cyan2': '96',
-    'fg_white2': '97',
+    'fg_light_black': '90',
+    'fg_light_red': '91',
+    'fg_light_green': '92',
+    'fg_light_yellow': '93',
+    'fg_light_blue': '94',
+    'fg_light_magenta': '95',
+    'fg_light_cyan': '96',
+    'fg_light_white': '97',
 
     # Colores del Fondo.
     'bg_black': '40',
@@ -44,18 +44,18 @@ all_styles = {
     'bg_magenta': '45',
     'bg_cyan': '46',
     'bg_white': '47',
-    'bg_black2': '100',
-    'bg_red2': '101',
-    'bg_green2': '102',
-    'bg_yellow2': '103',
-    'bg_blue2': '104',
-    'bg_magenta2': '105',
-    'bg_cyan2': '106',
-    'bg_white2': '107',
+    'bg_light_black': '100',
+    'bg_light_red': '101',
+    'bg_light_green': '102',
+    'bg_light_yellow': '103',
+    'bg_light_blue': '104',
+    'bg_light_magenta': '105',
+    'bg_light_cyan': '106',
+    'bg_light_white': '107',
 }
 """
 Contiene todos los estilos que se le pueden aplicar a los textos:
-- Formato (Bold, Underline, etc).
+- Modificadores (Bold, Underline, etc).
 - Color del Texto (Red, Black, Green, etc).
 - Color del Fondo (Red, Black, Green, etc).
 """

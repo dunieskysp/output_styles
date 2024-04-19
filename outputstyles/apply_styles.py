@@ -87,7 +87,7 @@ def create_arg(color: str = "", msg_format: str = "") -> list:
     if msg_format in ["btn", "btn_ico"]:
 
         # Texto en Negrita, color en blanco y fondo según el color del argumento.
-        return ['bold', 'fg_white2', f'bg_{color}']
+        return ['bold', 'fg_light_white', f'bg_{color}']
 
     # Retornamos por defecto el texto en Negrita y con el color del argumento.
     return ['bold', f'fg_{color}']
