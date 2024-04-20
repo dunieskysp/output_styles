@@ -1,14 +1,14 @@
 # Output Styles
 
-Aplicarle estilos al texto de salida por CLI.
+Aplicar estilos al texto de salida por CLI.
 
-## Instalación
+## Install
 
 ```bash
   pip install outputstyles
 ```
 
-## Uso/Ejemplos
+## Usage/Examples
 
 ### 1 - Usar los diferentes tipos de mensajes y estilos implementados
 
@@ -57,7 +57,7 @@ print(bold("Bold!"))
 
 Resultado:
 
-![output_styles](docs/img/outputstyles_all.png)
+![output_styles](https://raw.githubusercontent.com/dunieskysp/output_styles/main/docs/img/outputstyles_all.png)
 
 ### 2 - Agregar otros estilos al texto
 
@@ -89,11 +89,11 @@ print(add_text_styles("Hola", styles))
 
 Resultado:
 
-![output_styles](docs/img/custom_styles.png)
+![output_styles](https://raw.githubusercontent.com/dunieskysp/output_styles/main/docs/img/custom_styles.png)
 
 ### 3 - Crear nuevas funciones
 
-**Definir los datos y la función del nuevo tipo de mensaje:**
+**Definir los datos y la funcion del nuevo tipo de mensaje:**
 
 ```py
 from outputstyles import apply_styles
@@ -118,11 +118,11 @@ print(new_msg("Nuevo estilo", "btn_ico"))
 
 Resultado:
 
-![output_styles](docs/img/new_message_type.png)
+![output_styles](https://raw.githubusercontent.com/dunieskysp/output_styles/main/docs/img/new_message_type.png)
 
 ## Screenshots
 
-![output_styles](docs/img/output_styles_light.png)
+![output_styles](https://raw.githubusercontent.com/dunieskysp/output_styles/main/docs/img/output_styles_light.png)
 
 ## License
 

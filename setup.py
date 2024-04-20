@@ -7,7 +7,7 @@ long_desc = Path("README.md").read_text()
 # Datos del paquete
 setup(
     name="outputstyles",
-    version="0.1.3",
+    version="1.0.0",
     author="Duniesky Salazar Pérez",
     author_email="<duniesky.salazar@gmail.com>",
     description="Applying styles to CLI output",
